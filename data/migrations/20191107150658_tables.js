@@ -22,7 +22,7 @@ exports.up = function (knex) {
             // foreign key for ingredient
             tbl.integer('ingredient_id', 64).unsigned().references('id').inTable('ingredients').notNullable().onDelete('RESTRICT').onUpdate('CASCADE')
             // foreign key for recipe
-            tbl.integer('recipe_id', 64).unsigned().references('id').inTable('recipe').notNullable().onDelete('RESTRICT').onUpdate('CASCADE')
+            tbl.integer('recipe_id', 64).unsigned().references('id').inTable('recipes').notNullable().onDelete('RESTRICT').onUpdate('CASCADE')
         })
 };
 
